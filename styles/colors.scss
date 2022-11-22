@@ -2,10 +2,7 @@ $bg-color:#fff;
 $heading-color:  #222;
 $text-color:  #111;
 $accent-color:#311a59;
-
-@media(prefers-color-scheme: dark){
-    $bg-color:#222;
-    $heading-color: #fff;
-    $text-color: #333;
-    $accent-color:#311a59;
-}
+$bg-color-dark:#222;
+$heading-color-dark: #fff;
+$text-color-dark: #ddd;
+$accent-color-dark:#311a59;
