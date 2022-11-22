@@ -1,0 +1,29 @@
+$font-heading: Raleway, Helvetica;
+$font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,sans-serif;
+@use 'colors';
+html,
+body {
+    font-family: $font-default;
+    font-size: 12px;
+    font-weight: 400;
+    color: colors.$text-color;
+}
+
+h1 {
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 600;
+    color: colors.$heading-color;
+}
+h2 {
+    font-family: $font-default;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: colors.$text-color;
+}
+h3 {
+    font-family: $font-default;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: colors.$text-color;
+}
