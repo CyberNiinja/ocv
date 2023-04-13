@@ -1,0 +1,13 @@
+#bg-home{
+}
+
+#home {
+}
+@media (min-width: 768px) {
+    .portrait{
+        max-width: 45vh;
+    }
+}
+
+
+    
