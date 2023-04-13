@@ -16,13 +16,13 @@ code {
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 0.2em;
     margin:0;
 }
 h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
     margin:0;
@@ -48,6 +48,11 @@ h5{
     margin:0;
 }
 
+p{
+    margin:0;
+    margin-bottom: 2rem;
+}
+
 .dark {
     color: #E8D6C2;
     background-color: #252525;
@@ -64,14 +69,10 @@ section{
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem 1rem 1rem 1rem;
-    gap: 1rem;
-    border-bottom: 1px solid #252525;
+    gap: 0.5rem;
     max-width: 768px;
 }
 
-.dark section{
-    border-bottom: 1px solid #E8D6C2;
-}
 .circle{
     background-color: #3F485F;
     aspect-ratio: 1/1;
@@ -90,22 +91,14 @@ section{
     color: #252525;
 }
 
-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border-top: 1px solid #252525;
-}
-footer a{
-    text-decoration: none;
-    color: inherit;
-    padding: 0.5rem;
+.primary{
+    background-color: #3F485F;
+    color: #E8D6C2;
 }
 
-.dark footer{
-    border-top: 1px solid #E8D6C2;
+.primary.contrast{
+    background-color: #E8D6C2;
+    color: #3F485F;
 }
 
 @media (min-width: 768px) {

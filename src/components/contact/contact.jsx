@@ -21,13 +21,14 @@ function Contact() {
 				<Link
 					link="https://goo.gl/maps/joePJrMTjn3BHow27"
 					className="contact-link"
-					text="Schürlimattstrasse 4, CH-5103 Wildegg"
+					text={'Schürlimattstrasse 4, \n CH-5103 Wildegg'}
 					icon="location_on"
 				/>
 			</div>
 			<div id="circle-socials" className="circle contrast">
+				<h3>Socials</h3>
 				<Link
-					className="contact-link dark"
+					className="contact-link contrast"
 					link="https://www.linkedin.com/in/elias-mj%C3%B8en-979814262/"
 					text="LinkedIn">
 					<div className="icon-container">
@@ -45,7 +46,7 @@ function Contact() {
 					</div>
 				</Link>
 				<Link
-					className="contact-link"
+					className="contact-link contrast"
 					link="https://github.com/CyberNiinja"
 					text="GitHub">
 					<div className="icon-container">
@@ -65,7 +66,7 @@ function Contact() {
 					</div>
 				</Link>
 				<Link
-					className="contact-link"
+					className="contact-link contrast"
 					link="https://www.instagram.com/cyberniinja/"
 					text="Instagram">
 					<div className="icon-container">
@@ -83,6 +84,23 @@ function Contact() {
 					</div>
 				</Link>
 			</div>
+			<footer>
+				<div id="footer-left" className="contrast">
+					<div className="primary contrast">© Elias Mjøen 2023</div>
+					<div id="circle-1" className="circle primary contrast"></div>
+					<div id="circle-2" className="circle primary contrast"></div>
+					<div id="circle-3" className="circle primary contrast"></div>
+				</div>
+				<div id="footer-right" className="primary">
+					<Link
+						link="https://github.com/CyberNiinja/ocv"
+						text="Github Repo (React Code)"
+					/>
+					<div id="circle-4" className="circle primary"></div>
+					<div id="circle-5" className="circle primary"></div>
+					<div id="circle-6" className="circle primary"></div>
+				</div>
+			</footer>
 		</section>
 	);
 }

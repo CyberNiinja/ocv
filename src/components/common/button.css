@@ -39,6 +39,7 @@
 }
 .btn-text-container{
     margin-left: 0.5rem;
+    white-space: pre-wrap;
 }
 
 
@@ -59,18 +60,21 @@
     font-size: 1.25rem;
 }
 
-.link.dark .btn-icon-container{
+.dark .contrast .btn.contrast .btn-icon-container,
+.btn.contrast .btn-icon-container{
     background-color: #252525;
     color: #E8D6C2;
 }
-.link.light .btn-icon-container{
+
+.dark .btn.contrast .btn-icon-container,
+.contrast .btn.contrast .btn-icon-container{
     background-color: #E8D6C2;
     color: #252525;
 }
-
-.link.dark .btn-text-container{
+.dark .contrast .btn.contrast .btn-text-container,
+.btn.contrast .btn-text-container{
     color: #252525;
-}
-.link.light .btn-text-container{
+}.dark .btn.contrast .btn-text-container,
+.contrast .btn.contrast .btn-text-container{
     color: #E8D6C2;
 }

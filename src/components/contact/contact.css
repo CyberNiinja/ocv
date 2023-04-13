@@ -7,31 +7,98 @@
     align-items: flex-end;
     flex-direction: row;
     padding:0;
-    border-bottom: none;
     max-width: 100%;
     position: relative;
+    overflow: hidden;
 }
+#contact h3{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+#contact footer{
+    width:100%;
+    position: absolute;
+}
+#contact .material-symbols-outlined{
+    font-variation-settings: "FILL" 1;
+}
+
 #circle-contact{
-    padding-inline: 0.5rem;
-    padding-bottom: 1rem;
-    width: 12rem;
+    padding: 1.5rem 2.5rem 1.5rem 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: center;
     border-radius: 0% 100% 0 0
 }
 #circle-socials{
+    padding: 1rem 0.5rem 1rem 1.5rem;
     aspect-ratio: 1/2;
     padding-right:0.5rem;
-    width: 8rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     border-radius: 90vh 0 0 90vh
 }
-#contact h3{
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+
+
+footer{
+    position:absolute;
+}
+#footer-left{
+    position: relative;
+    font-size: .75rem;
+    float:left;
+}
+#footer-right{
+    position: relative;
+    font-size: .75rem;
+    float:right;
+}
+#footer-right .btn,
+#footer-left div:first-child{
+    position: relative;
+    z-index: 3;
+}
+#footer-right .circle,
+#footer-left .circle{
+    position: absolute;
+    z-index: 2;
+}
+#footer-left #circle-1{
+    bottom:-1.25rem;
+    left:-1.5rem;
+    width: 4rem;
+}
+#footer-left #circle-2{
+    bottom:-2.25rem;
+    left:1rem;
+    width: 4rem;
+}
+#footer-left #circle-3{
+    bottom:-1.9rem;
+    right:-1rem;
+    width: 3rem;
+}
+#footer-right #circle-4{
+    bottom:-3.5rem;
+    right: -3.5rem;
+    width: 7rem;
+}
+#footer-right #circle-5{
+    bottom:-2rem;
+    right:2rem;
+    width: 4.5rem;
+}
+#footer-right #circle-6{
+    bottom:-1.5rem;
+    left:-.75rem;
+    width: 3rem;
+}
+
+
+
+#footer-right .btn-text-container{
+    font-size: .75rem;
 }

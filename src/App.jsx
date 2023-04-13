@@ -38,13 +38,6 @@ function App() {
 				<Work />
 				<Contact />
 			</main>
-			<footer>
-				<div>© Elias Mjøen 2023</div>
-				<Link
-					link="https://github.com/CyberNiinja/ocv"
-					text="Github Repo (React Code)"
-				/>
-			</footer>
 		</div>
 	);
 }

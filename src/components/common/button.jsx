@@ -20,16 +20,20 @@ function Button(props) {
 }
 
 function Link(props) {
-	const { text, children, className, id, link, icon } = props;
+	const { text, children, className, id, link, icon, download } = props;
 	return (
-		<a href={link ?? ''} id={id ?? ''} className={`btn ${className ?? ''}`}>
+		<a
+			href={link ?? ''}
+			id={id ?? ''}
+			className={`btn ${className ?? ''}`}
+			download={download}>
 			{(children || icon) && (
 				<div className="btn-icon-container">
 					{icon ? <div className="material-symbols-outlined">{icon}</div> : ''}
 					{children ?? ''}
 				</div>
 			)}
-			{text ? <span className="btn-text-container">{text}</span> : ''}
+			{text ? <div className="btn-text-container">{text}</div> : ''}
 		</a>
 	);
 }
