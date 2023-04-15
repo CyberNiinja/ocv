@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/*Typography*/
 html, body {
     color-scheme: dark light;
     font-family:'Source Sans Pro',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,7 +15,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-
 h1{
     font-size: 3.5rem;
     font-weight: 600;
@@ -26,8 +26,8 @@ h2{
     font-weight: 300;
     text-transform: uppercase;
     margin:0;
+    margin-bottom: 0.5rem;
 }
-
 h3{
     font-size: 1.5rem;
     font-weight: 600;
@@ -35,70 +35,19 @@ h3{
     text-transform: uppercase;
     margin:0;
 }
-
 h4{
     font-size: 1rem;
     font-weight: 600;
     margin:0;
 }
-
 h5{
     font-size: 1rem;
     font-weight: 400;
     margin:0;
 }
-
 p{
     margin:0;
     margin-bottom: 2rem;
-}
-
-.dark {
-    color: #E8D6C2;
-    background-color: #252525;
-}
-.light {
-    color: #252525;
-    background-color: #E8D6C2;
-}
-
-section{
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 2rem 1rem 1rem 1rem;
-    gap: 0.5rem;
-    max-width: 768px;
-}
-
-.circle{
-    background-color: #3F485F;
-    aspect-ratio: 1/1;
-    margin-inline: auto 0 0;
-    z-index: 0;
-    border-radius: 90vh;
-    color: #E8D6C2;
-}
-
-.contrast{
-    background-color: #252525;
-    color: #E8D6C2;
-}
-.dark .contrast{
-    background-color: #E8D6C2;
-    color: #252525;
-}
-
-.primary{
-    background-color: #3F485F;
-    color: #E8D6C2;
-}
-
-.primary.contrast{
-    background-color: #E8D6C2;
-    color: #3F485F;
 }
 
 @media (min-width: 768px) {
@@ -113,3 +62,125 @@ section{
         font-size: 20px;
     }
 }
+
+/* LAYOUT */
+#root{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+    overflow: hidden;
+}
+/* H1 & H2 */
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+header{
+    grid-area: header;
+    padding: 1rem;
+}
+main{
+    grid-area: main;
+    padding: 1rem;
+}
+footer {
+    grid-area: footer;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:0.5rem;
+    margin: 1rem;
+}
+.container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* COLORS */
+
+.dark,
+.light .contrast,
+.dark .contrast .contrast
+{
+    color: #E8D6C2;
+    background-color: #252525;
+}
+.light, 
+.dark .contrast,
+.light .contrast .contrast
+{
+    color: #252525;
+    background-color: #E8D6C2;
+
+}
+
+.primary.contrast .contrast,
+.primary{
+    background-color: #3F485F;
+    color: #E8D6C2;
+}
+
+.primary .contrast,
+.primary.contrast{
+    background-color: #E8D6C2;
+    color: #3F485F;
+}
+
+.fake.contrast{
+    background-color: #E8D6C2;
+    color: #252525;
+}
+
+.light .text , 
+.light .contrast.text,
+.dark .contrast .text,
+.light .contrast .contrast.text {
+    background-color: transparent;
+    color: #252525;
+}
+.dark .text ,
+.primary.contrast.text,
+.primary .text,
+.light .contrast .text,
+
+.dark .contrast .contrast.text{
+    background-color: transparent;
+    color: #E8D6C2;
+}
+
+.primary.text{
+    color: #3F485F;
+}
+
+
+/* Shapes */ 
+.circle{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.circle__group{
+    display: block;
+    position: absolute;
+}
+
+.circle__group .circle{
+    position: absolute;
+}
+

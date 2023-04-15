@@ -5,23 +5,10 @@ header{
     position: -webkit-sticky;
     top: 0;
     position: sticky;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: 
-    "a b c" 
-    "d d d";
+    display: flex;
+    flex-direction: row;
     justify-items: center;
-    border-bottom: 1px solid #252525;
-    background-color: #E8D6C2;
 }
-
-.dark header{
-    background-color: #252525;
-    border-bottom: 1px solid #E8D6C2;
-}
-
 
 
 #logo{
@@ -29,15 +16,15 @@ header{
     z-index: 5;
     justify-self: flex-start;
 }
-#logo .circle{
-    z-index: 4;
+#logo a{
+    text-decoration: none;
+    color: inherit;
 }
 
 #nav-toggle{
     grid-area: c;
     z-index: 4;
 }
-
 
 #theme-switch{
     grid-area: b;
@@ -52,20 +39,54 @@ header{
 }
 
 
-nav{    
-    grid-area: d;
-    display: none;
-    opacity: 0;
-    margin-top: -200%;
-    margin-left: -200%;
-    transition: margin-top 0.3s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+
+main{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: unset;
+    border-radius: 0;
+    background-color: inherit;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    z-index:2;
+}
+
+header.expanded ~ main{
+    z-index: 3;
+    position: relative;
+    border-radius: 50vh;
+    aspect-ratio: 1/1;
+    width: 100vw;
+    background-color: #3F485F;
+    transform: scale(0.6);
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+main .content{
+    max-height: none;
+}
+header.expanded ~ main .content{
+max-height: 0px;
+overflow: hidden;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin-left: -2rem;
 }
 header.expanded nav{
-    margin-top: 0;
-    margin-left: 0;
-    opacity: 1;
-    transition: margin-top 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+
+.nav-circle.active{
+    display: none;
+}
+
 
 #nav-contact{
     transition: margin-top 0.1s ease-in-out;

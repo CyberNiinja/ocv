@@ -60,6 +60,10 @@
     font-size: 1.25rem;
 }
 
+.contrast.btn {
+    background:transparent !important;
+}
+
 .dark .contrast .btn.contrast .btn-icon-container,
 .btn.contrast .btn-icon-container{
     background-color: #252525;
@@ -71,10 +75,50 @@
     background-color: #E8D6C2;
     color: #252525;
 }
-.dark .contrast .btn.contrast .btn-text-container,
-.btn.contrast .btn-text-container{
+.dark .btn.contrast .btn-text-container,
+.light .contrast .btn.contrast .btn-text-container{
     color: #252525;
-}.dark .btn.contrast .btn-text-container,
-.contrast .btn.contrast .btn-text-container{
+}
+.dark .contrast .btn.contrast .btn-text-container,
+.light .btn.contrast .btn-text-container{
+    color: #E8D6C2;
+}
+
+.btn.inline{
+    display: inline-flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+}
+.btn.inline .material-symbols-outlined{
+    font-size: 1.25rem;
+}
+.btn.inline .btn-icon-container{
+    align-self: center;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0;
+    background-color: transparent;
+}
+.btn.inline .btn-text-container{
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: underline;
+    margin-left:0;
+}
+
+.btn.icon__fill .btn-icon-container{
+    background-color: transparent;
+}
+.btn.icon__fill .btn-text-container{
+    background-color: transparent;
+}
+.btn.icon__fill .material-symbols-outlined{
+    font-variation-settings: "FILL" 1;
+}
+.btn.icon__fill.primary.contrast .btn-icon-container{
+    background-color: transparent;
+    color: #E8D6C2;
+}
+.btn.icon__fill.primary.contrast .btn-text-container{
     color: #E8D6C2;
 }

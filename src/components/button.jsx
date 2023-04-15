@@ -1,5 +1,6 @@
 import React from 'react';
 import './button.css';
+import { Link as RL } from 'react-router-dom';
 
 function Button(props) {
 	const { text, children, className, id, onClick, icon } = props;
@@ -20,21 +21,26 @@ function Button(props) {
 }
 
 function Link(props) {
-	const { text, children, className, id, link, icon, download } = props;
+	const { text, children, className, id, link, icon, download, ref } = props;
 	return (
-		<a
-			href={link ?? ''}
+		<RL
+			to={link ?? ''}
 			id={id ?? ''}
 			className={`btn ${className ?? ''}`}
 			download={download}>
 			{(children || icon) && (
-				<div className="btn-icon-container">
-					{icon ? <div className="material-symbols-outlined">{icon}</div> : ''}
+				<span className="btn-icon-container">
+					{icon ? (
+						<span className="material-symbols-outlined">{icon}</span>
+					) : (
+						''
+					)}
 					{children ?? ''}
-				</div>
+				</span>
 			)}
-			{text ? <div className="btn-text-container">{text}</div> : ''}
-		</a>
+			{text ? <span className="btn-text-container">{text}</span> : ''}
+		</RL>
 	);
 }
+
 export { Link, Button };

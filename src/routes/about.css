@@ -1,0 +1,25 @@
+#hobbies,
+#childhood,
+#carreer{
+    position: relative;
+}
+#hobbies > .btn,
+#childhood > .btn,
+#carreer > .btn{
+    position: absolute;
+    right: 1rem;
+}
+
+.image-container{
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.image{
+    border-radius: 3%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 60vh;
+}
+
