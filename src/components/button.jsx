@@ -27,7 +27,9 @@ function Link(props) {
 			to={link ?? ''}
 			id={id ?? ''}
 			className={`btn ${className ?? ''}`}
-			download={download}>
+			download={download ?? ''}
+			target={download ? '_blank' : ''}
+			end>
 			{(children || icon) && (
 				<span className="btn-icon-container">
 					{icon ? (

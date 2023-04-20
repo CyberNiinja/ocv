@@ -2,14 +2,15 @@ import React from 'react';
 import Home from './routes/home';
 import About from './routes/about';
 import Projects from './routes/projects';
-import Contact from './components/navigation/contact';
-import Navbar from './components/navigation/navbar';
+import Contact from './routes/contact';
+import Navbar from './components/navbar';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
 	const [navExpand, setNavExpand] = React.useState(false);
 	const toggleNav = () => {
+		console.log('should toggle theme');
 		setNavExpand(!navExpand);
 	};
 	const [theme, setTheme] = React.useState(null);
@@ -52,18 +53,18 @@ function App() {
 					onTheme={toggleTheme}
 				/>
 			</header>
-			<nav></nav>
 			<main>
 				<Routes>
 					<Route index element={<Home />} />
 					<Route path="projects" element={<Projects />} />
 					<Route path="about" element={<About />} />
+					<Route path="contact" element={<Contact />} />
 					<Route path="*" />
 				</Routes>
 				<Outlet />
 			</main>
 			<footer>
-				<Contact />
+				<div id="footnote">© Elias Mjøen 2023</div>
 			</footer>
 		</>
 	);

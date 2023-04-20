@@ -1,25 +1,29 @@
 #hobbies,
 #childhood,
 #carreer{
+    width: 100%;
     position: relative;
 }
-#hobbies > .btn,
-#childhood > .btn,
-#carreer > .btn{
-    position: absolute;
-    right: 1rem;
+#hobbies .header-link,
+#childhood .header-link,
+#carreer .header-link{
+    justify-content: space-between;
 }
-
 .image-container{
-
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 .image{
-    border-radius: 3%;
+    border-radius: 0;
     object-fit: cover;
-    object-position: center;
+    object-position: 50% 30%;
+    aspect-ratio: 16/9;
     width: 100%;
-    max-height: 60vh;
 }
 
+.heading{
+    margin-bottom: 0rem;
+}

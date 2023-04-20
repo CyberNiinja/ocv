@@ -9,7 +9,7 @@
     border: none; 
     background-color: transparent;
     color: inherit;
-    font-size: 1rem;
+    font-size: inherit;
     font-weight: 300;
     font-family: inherit;
 }
@@ -30,14 +30,14 @@
     align-items: center;
     justify-items:center;
     background-color: #3F485F;
-    width: 1rem;
-    height: 1rem;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 0.5em;
     margin: 0;
     color: #E8D6C2;
 }
-.btn-text-container{
+.btn-icon-container ~ .btn-text-container{
     margin-left: 0.5rem;
     white-space: pre-wrap;
 }
@@ -45,8 +45,8 @@
 
 /* Icons */
 .icon{
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1em;
+    height: 1em;
 }
 
 .icon-container{
@@ -58,10 +58,6 @@
 
 .material-symbols-outlined{
     font-size: 1.25rem;
-}
-
-.contrast.btn {
-    background:transparent !important;
 }
 
 .dark .contrast .btn.contrast .btn-icon-container,
@@ -88,6 +84,7 @@
     display: inline-flex;
     align-items: baseline;
     flex-direction: row-reverse;
+    color: inherit;
 }
 .btn.inline .material-symbols-outlined{
     font-size: 1.25rem;
@@ -98,6 +95,7 @@
     display: inline-block;
     padding: 0;
     background-color: transparent;
+    color: inherit;
 }
 .btn.inline .btn-text-container{
     font-size: 1rem;
@@ -106,19 +104,44 @@
     margin-left:0;
 }
 
+.btn.icon__outline .btn-icon-container,
 .btn.icon__fill .btn-icon-container{
+    font-size: inherit;
     background-color: transparent;
+    padding:0;
 }
+.btn.icon__outline .btn-text-container,
 .btn.icon__fill .btn-text-container{
+    font-size: inherit;
     background-color: transparent;
 }
+
+.btn.icon__outline .material-symbols-outlined,
 .btn.icon__fill .material-symbols-outlined{
+    font-size: inherit;
     font-variation-settings: "FILL" 1;
 }
+.btn.icon__outline .material-symbols-outlined{
+    font-variation-settings: "FILL" 0;
+}
+
+.dark .btn.icon__outline.contrast .btn-icon-container,
+.light .btn.icon__outline .btn-icon-container,
+.dark .btn.icon__fill.contrast .btn-icon-container,
+.light .btn.icon__fill .btn-icon-container{
+    background-color: transparent;
+    color: #252525;
+}
+
+.light .btn.icon__outline.contrast .btn-icon-container,
+.light .btn.icon__fill.contrast .btn-icon-container,
 .btn.icon__fill.primary.contrast .btn-icon-container{
     background-color: transparent;
     color: #E8D6C2;
 }
+
+
 .btn.icon__fill.primary.contrast .btn-text-container{
     color: #E8D6C2;
 }
+
