@@ -1,7 +1,8 @@
 import React from 'react';
 import './career.css';
-import { Button, Link } from '../components/button';
+import { Link } from '../components/button';
 import portrait from '../images/carreer.jpg';
+import pdf from '../images/Dossier.pdf';
 export default function Career() {
 	return (
 		<section className="career">
@@ -21,7 +22,12 @@ export default function Career() {
 						<h3>Career</h3>
 						<p>My Journey in IT</p>
 					</div>
-					<Link icon="fa-solid fa-download" text="CV" />
+					<Link
+						link={pdf}
+						icon="fa-solid fa-download"
+						text="CV"
+						download="CV_Elias_Mjoen.pdf"
+					/>
 
 					<div className="image__container">
 						<img
