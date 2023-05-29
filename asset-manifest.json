@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.78c00f70.css",
+    "main.css": "/static/css/main.a381396a.css",
     "main.js": "/static/js/main.38aac13b.js",
     "static/media/Dossier.pdf": "/static/media/Dossier.a327d065ecc9322a79cd.pdf",
     "static/media/childhood.jpg": "/static/media/childhood.a36d59b9f2d9cc5abd0d.jpg",
@@ -11,11 +11,11 @@
     "static/media/GEIGER.jpg": "/static/media/GEIGER.ade3473d74bd1a193fee.jpg",
     "static/media/Ivis.jpg": "/static/media/Ivis.ad876b1636610eb7a5e7.jpg",
     "index.html": "/index.html",
-    "main.78c00f70.css.map": "/static/css/main.78c00f70.css.map",
+    "main.a381396a.css.map": "/static/css/main.a381396a.css.map",
     "main.38aac13b.js.map": "/static/js/main.38aac13b.js.map"
   },
   "entrypoints": [
-    "static/css/main.78c00f70.css",
+    "static/css/main.a381396a.css",
     "static/js/main.38aac13b.js"
   ]
 }
