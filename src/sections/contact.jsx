@@ -45,7 +45,7 @@ function Contact() {
 				url: 'https://formbold.com/s/9BvwL',
 				data: {
 					...inputs,
-					'g-recaptcha-response': token + 'test',
+					'g-recaptcha-response': token,
 				},
 			});
 			// Handle the result
