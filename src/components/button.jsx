@@ -2,46 +2,37 @@ import React from 'react';
 import './button.css';
 import { Link as RL } from 'react-router-dom';
 
-function Button(props) {
-	const { text, children, className, id, onClick, icon } = props;
+function Button({ text, children, className, onClick, icon, ...rest }) {
 	return (
 		<button
-			id={id ?? ''}
-			className={`btn ${className ?? ''}`}
-			onClick={onClick}>
+			onClick={onClick}
+			className={`btn${className ? ' ' + className : ''}`}
+			{...rest}>
 			{(children || icon) && (
-				<div className="btn-icon-container">
-					{icon ? <div className="material-symbols-outlined">{icon}</div> : ''}
+				<span className="btn__icon__container">
+					{icon ? <i className={icon}></i> : ''}
 					{children ?? ''}
-				</div>
+				</span>
 			)}
-			{text ? <span className="btn-text-container">{text}</span> : ''}
+			{text ? <span className="btn__text__container">{text}</span> : ''}
 		</button>
 	);
 }
 
-function Link(props) {
-	const { text, children, className, id, link, icon, download, ref } = props;
+function Link({ text, children, className, link, icon, ...rest }) {
 	return (
-		<RL
-			to={link ?? ''}
-			id={id ?? ''}
-			className={`btn ${className ?? ''}`}
-			download={download ?? ''}
-			target={download ? '_blank' : ''}
-			end>
+		<a
+			href={link}
+			className={`btn${className ? ' ' + className : ''}`}
+			{...rest}>
 			{(children || icon) && (
-				<span className="btn-icon-container">
-					{icon ? (
-						<span className="material-symbols-outlined">{icon}</span>
-					) : (
-						''
-					)}
+				<span className="btn__icon__container">
+					{icon ? <i className={icon}></i> : ''}
 					{children ?? ''}
 				</span>
 			)}
-			{text ? <span className="btn-text-container">{text}</span> : ''}
-		</RL>
+			{text ? <span className="btn__text__container">{text}</span> : ''}
+		</a>
 	);
 }
 

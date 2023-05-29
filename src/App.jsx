@@ -1,11 +1,12 @@
 import React from 'react';
-import Home from './routes/home';
-import About from './routes/about';
-import Projects from './routes/projects';
-import Contact from './routes/contact';
+import Home from './sections/home';
+import About from './sections/about';
+import Projects from './sections/projects';
+import Contact from './sections/contact';
+import Carreer from './sections/career';
 import Navbar from './components/navbar';
-import { Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
+import { Link } from './components/button';
 
 function App() {
 	const [navExpand, setNavExpand] = React.useState(false);
@@ -54,17 +55,24 @@ function App() {
 				/>
 			</header>
 			<main>
-				<Routes>
-					<Route index element={<Home />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="about" element={<About />} />
-					<Route path="contact" element={<Contact />} />
-					<Route path="*" />
-				</Routes>
-				<Outlet />
+				<Home />
+				<Projects />
+				<Carreer />
+				<About />
+				<Contact />
 			</main>
-			<footer>
-				<div id="footnote">© Elias Mjøen 2023</div>
+			<footer className="primary">
+				© Elias Mjøen 2023
+				<Link
+					link="https://www.privacypolicygenerator.info/live.php?token=3pLM1x8zUQ0INTedkGP65MOC4uFK3QCO"
+					className="btn__inline"
+					id="privacy-policy"
+					text="Privacy Policy"></Link>
+				<Link
+					link="https://www.termsandconditionsgenerator.com/live.php?token=3pLM1x8zUQ0INTedkGP65MOC4uFK3QCO"
+					className="btn__inline"
+					id="terms-and-conditions"
+					text="Terms & Conditions"></Link>
 			</footer>
 		</>
 	);

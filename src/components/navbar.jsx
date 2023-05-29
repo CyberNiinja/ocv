@@ -1,47 +1,47 @@
 import React from 'react';
 import './navbar.css';
 import { Button, Link } from './button';
-import { useMatch } from 'react-router-dom';
+import Logo from '../components/Logo';
 
-export default function Navbar({ nav, onNav, theme, onTheme }) {
-	const matchHome = useMatch('/');
-	const matchAbout = useMatch('/about');
-	const matchProjects = useMatch('/projects');
-	const matchContact = useMatch('/contact');
+export default function Navbar({ onTheme }) {
 	return (
-		<nav className="container">
-			<Link
-				link="/"
-				icon="home"
-				className={matchHome ? 'icon__fill' : 'icon__outline'}
-				text={matchHome ? 'Home' : ''}
-			/>
-			<Link
-				link="/about"
-				icon="person"
-				className={matchAbout ? 'icon__fill' : 'icon__outline'}
-				text={matchAbout ? 'About' : ''}
-			/>
-			<Link
-				link="/projects"
-				icon="work"
-				className={matchProjects ? 'icon__fill' : 'icon__outline'}
-				text={matchProjects ? 'Projects' : ''}
-			/>
-			<Link
-				link="/contact"
-				icon="mail"
-				className={matchContact ? 'icon__fill' : 'icon__outline'}
-				text={matchContact ? 'Contact' : ''}
-			/>
+		<nav>
+			<Link link="/" className="btn__inline" id="logo">
+				<Logo className="icon"></Logo>
+			</Link>
 			<div className="spacer"></div>
-
-			<Button
-				id="theme-switch"
-				className="icon__fill"
-				icon={`${theme}_mode`}
-				onClick={onTheme}
-			/>
+			<Button id="theme-toggle" className="btn__inline" onClick={onTheme}>
+				{/* src: https://web.dev/building-a-theme-switch-component/ */}
+				<svg
+					className="sun-and-moon"
+					aria-hidden="true"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24">
+					<circle
+						className="sun"
+						cx="12"
+						cy="12"
+						r="6"
+						mask="url(#moon-mask)"
+						fill="currentColor"
+					/>
+					<g className="sun-beams" stroke="currentColor">
+						<line x1="12" y1="1" x2="12" y2="3" />
+						<line x1="12" y1="21" x2="12" y2="23" />
+						<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+						<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+						<line x1="1" y1="12" x2="3" y2="12" />
+						<line x1="21" y1="12" x2="23" y2="12" />
+						<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+						<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+					</g>
+					<mask className="moon" id="moon-mask">
+						<rect x="0" y="0" width="100%" height="100%" fill="white" />
+						<circle cx="24" cy="10" r="6" fill="black" />
+					</mask>
+				</svg>
+			</Button>
 		</nav>
 	);
 }
