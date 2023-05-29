@@ -1,4 +1,6 @@
-
+.about {
+    position: relative;
+}
 .about .about__content{
     display: flex;
     flex-direction: column;
@@ -8,8 +10,6 @@
 }
 
 .about > .wave {
-    width: 100%;
-    aspect-ratio: 9/1;
     transform: translateY(1%);
 }
 
