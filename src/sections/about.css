@@ -7,14 +7,10 @@
     margin-bottom: 2rem;
 }
 
-.about > .gutter {
-    background-position: 0% 0%;
-    &> .wave{
-        width: 100%;
-        aspect-ratio: 9/1;
-        transform: translateY(1%);
-    }
-
+.about > .wave {
+    width: 100%;
+    aspect-ratio: 9/1;
+    transform: translateY(1%);
 }
 
 .about .about__content > article{
