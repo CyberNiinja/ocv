@@ -1,6 +1,6 @@
 {
-    "name": "elias.mjoen.ch",
-    "short_name": "elias.mjoen.ch",
+    "name": "Elias Mj\u00f8en",
+    "short_name": "Elias Mj\u00f8en",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#e8d6c2",
-    "background_color": "#e8d6c2",
+    "theme_color": "#3f485f",
+    "background_color": "transparent",
     "display": "standalone"
 }
