@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from '../components/project';
-import './projects.css';
+import './projects.sass';
 export default function Projects() {
 	const bachelorImg = require('../images/bachelor.jpg');
 	const ivisImg = require('../images/Ivis.jpg');

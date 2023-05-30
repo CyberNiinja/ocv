@@ -5,7 +5,7 @@ import Projects from './sections/projects';
 import Contact from './sections/contact';
 import Carreer from './sections/career';
 import Navbar from './components/navbar';
-import './App.css';
+import './App.sass';
 import { Link } from './components/button';
 
 function App() {

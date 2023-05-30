@@ -1,5 +1,5 @@
 import React from 'react';
-import './project.css';
+import './project.sass';
 import { Button, Link } from './button';
 export default function Project({
 	name,

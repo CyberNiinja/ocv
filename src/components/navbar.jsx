@@ -1,5 +1,5 @@
 import React from 'react';
-import './navbar.css';
+import './navbar.sass';
 import { Button, Link } from './button';
 import Logo from '../components/Logo';
 

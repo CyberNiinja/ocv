@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import './contact.css';
+import './contact.sass';
 import { Button, Link } from '../components/button';
 import axios from 'axios';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -98,7 +98,7 @@ function Contact() {
 							id="email"
 							type="email"
 							name="email"
-							placeholder="Email"
+							placeholder="Email (you@example.com)"
 						/>
 						<input
 							required
@@ -107,7 +107,7 @@ function Contact() {
 							id="subject"
 							type="text"
 							name="subject"
-							placeholder="Subject"
+							placeholder="Subject (e.g. Job Offer)"
 						/>
 						<textarea
 							required
@@ -116,7 +116,7 @@ function Contact() {
 							rows={10}
 							id="message"
 							name="message"
-							placeholder="Type your message here..."
+							placeholder="Message (e.g. Hi, I would like to hire you for a job...)"
 						/>
 						{isSending && (
 							<Button icon="fa-solid fa-spinner fa-spin" text="Sending..." />

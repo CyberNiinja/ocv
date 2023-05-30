@@ -1,5 +1,5 @@
 import React from 'react';
-import './career.css';
+import './career.sass';
 import { Link } from '../components/button';
 import portrait from '../images/carreer.jpg';
 import pdf from '../images/Dossier.pdf';

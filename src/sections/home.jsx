@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import './home.sass';
 import Logo from '../components/Logo';
 import { Link } from '../components/button';
 function Home() {
