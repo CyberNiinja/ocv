@@ -12,9 +12,9 @@ function Home() {
 					<h4>Hi! Nice to meet you :)</h4>
 					<h5>
 						I'm an IT guy based in switzerland that spezializes in designing and
-						developing beautiful and user-friendly web-solutions. I just
-						finished my bachelor's degree and I'm looking for job opportunities
-						that allow me to continue my journey in the IT industry.
+						developing beautiful and user-friendly web-solutions. I finished my 
+						bachelors degree in 2023 and I'm currently working as a UI/UX Designer at 
+						Bertschi Digital Logistics.
 					</h5>
 					<div className="links">
 						<Link
